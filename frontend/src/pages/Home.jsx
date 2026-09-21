@@ -5,6 +5,7 @@ import TaskList from "../components/TaskList";
 import { deleteTask, getTasks, updateTask } from "../services/api";
 import { showError, showSuccess } from "../utils/alert";
 
+
 const FILTERS = ["All", "Pending", "In Progress", "Completed"];
 
 function Home() {
@@ -104,8 +105,8 @@ function Home() {
   return (
     <div>
       <div className="mb-6">
-        <h1 className="text-2xl font-bold sm:text-3xl">My Tasks</h1>
-        <p className="text-sm text-base-content/60">
+        <h1 className="text-2xl font-bold sm:text-4xl">My Tasks</h1>
+        <p className="text-lg mt-2 ">
           Total {tasks.length} task{tasks.length !== 1 && "s"}
         </p>
       </div>
@@ -114,7 +115,7 @@ function Home() {
         {FILTERS.map((f) => (
           <button
             key={f}
-            className={`tab ${filter === f ? "tab-active" : ""}`}
+            className={`text-[16px] tab ${filter === f ? "tab-active" : ""}`}
             onClick={() => setFilter(f)}
           >
             {f}

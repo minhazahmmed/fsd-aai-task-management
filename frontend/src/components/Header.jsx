@@ -2,13 +2,13 @@ import { Link, NavLink } from "react-router";
 import { FiCheckSquare, FiPlus } from "react-icons/fi";
 
 function navClass({ isActive }) {
-  return `btn btn-sm ${isActive ? "btn-primary" : "btn-ghost"}`;
+  return `btn btn-md  ${isActive ? "btn-primary" : "btn-ghost"}`;
 }
 
 function Header() {
   return (
     <header className="sticky top-0 z-40 bg-base-100 shadow-sm">
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         <Link to="/" className="flex items-center gap-2 text-xl font-bold">
           <FiCheckSquare className="text-primary" />
           TaskFlow
